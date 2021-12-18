@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    padding: 1em;
+}
+
+.header a {
+    text-decoration: none;
+    color: black
+}
+.btn a {
+    color: white;
+}
+
+.selected {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.main {
+    display: flex;
+    padding: 3em;
+}
+
+.right img {
+    width: 50vw;
+    max-height: 600px;
+}

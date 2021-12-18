@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 72vh;
+  width: 80vh;
+  max-width: 80vh;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+img {
+  padding: 1em;
+  height: 150px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-input {
+  display: flex;
+  margin: 0.5em;
+}
+
+.form-input label {
+  text-align: left;
+  width: 50%;
+  margin-right: 30px;
+}
+
+.form-input input {
+  width: 50%;
+}
+
+
+button {
+  margin-top: 1em;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 2em;
+}
