@@ -1,0 +1,15 @@
+{
+    "name": "nourgaser/nutrio",
+    "autoload": {
+        "psr-4": {
+            "Nourgaser\\Nutrio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nourgaser",
+            "email": "nourgaser2012@gmail.com"
+        }
+    ],
+    "require": {}
+}
