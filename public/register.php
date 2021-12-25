@@ -30,8 +30,8 @@
                 <input type="password" name="password2" id="password2">
             </div>
             <div class="form-input">
-                <label for="age">Age</label>
-                <input type="number" name="age" id="age">
+                <label for="age">Birthday</label>
+                <input type="date" name="birthday" id="birthday">
             </div>
             <div class="form-input">
                 <label for="weight">Weight</label>
