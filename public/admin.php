@@ -8,6 +8,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+if (!isset($_SESSION["admin"])) {
+    header("location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +22,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/global.css">
-
-    <title>Profile</title>
+    <title>Admin</title>
 </head>
 
 <style>
@@ -30,7 +33,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </style>
 
 <body>
-    <h1>Welcome <?php echo $_SESSION["email"] ?></h1>
+    <h1>Welcome <?php echo $_SESSION["email"] ?> - You are an admin.</h1>
     <table>
         <th>id</th>
         <th>name</th>
@@ -40,9 +43,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <th>height</th>
         <th>goal</th>
         <?php
-        $query = "SELECT * FROM user WHERE email=?";
+        $query = "SELECT * FROM user";
         $stmt = mysqli_prepare($link, $query);
-        mysqli_stmt_bind_param($stmt, "s", $_SESSION["email"]);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
@@ -55,12 +57,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             }
             echo "</tr>";
         }
-        echo "</table>";
 
-        if (isset($_SESSION["admin"])) echo "<a href=\"admin.php\"> <button class=\"btn noselect\">All Users</button> </a>"
         ?>
-        <a href="index.php"><button class="btn noselect">Back</button></a>
-        <a href="logout.php"><button class="btn noselect">Logout</button></a>
+    </table>
+    <a href="profile.php"><button class="btn noselect">Back</button></a>
+    <a href="logout.php"><button class="btn noselect">Logout</button></a>
 </body>
 
 </html>
