@@ -3,19 +3,19 @@ This project roughly follows the software requirements specifications and UML mo
 
 ### Screenshots
 #### Homepage
-![homepage.png](images/screenshots/homepage.png)
+![homepage.png](public/images/screenshots/homepage.png)
 
 #### Login
-![homepage.png](images/screenshots/login.png)
+![homepage.png](public/images/screenshots/login.png)
 
 #### Register
-![homepage.png](images/screenshots/register.png)
+![homepage.png](public/images/screenshots/register.png)
 
 #### Profile Page
-![homepage.png](images/screenshots/user.png)
+![homepage.png](public/images/screenshots/user.png)
 
 #### Admin Page
-![homepage.png](images/screenshots/admin.png)
+![homepage.png](public/images/screenshots/admin.png)
 
 
 
